@@ -1,0 +1,65 @@
+<style>
+.mode-landscape .sl-layout { flex-direction: row; }
+.mode-portrait .sl-layout { flex-direction: column; }
+.mode-landscape .sl-content { width: 60%; }
+.mode-portrait .sl-content { width: 100%; flex: 1; }
+.mode-landscape .sl-visual { width: 40%; }
+.mode-portrait .sl-visual { width: 100%; height: 32%; }
+</style>
+
+<section class="w-full h-full overflow-auto bg-white">
+  <div class="sl-layout flex h-full">
+
+    <!-- Left: Content -->
+    <div class="sl-content flex flex-col justify-center gap-6 p-12">
+      <div>
+        <p class="text-xs font-semibold tracking-widest uppercase mb-3" style="color: {{config.brandColor.accent}};">The Opportunity</p>
+        <h2 class="text-3xl font-bold leading-snug" style="color: {{config.brandColor.primary}}; font-family: {{config.theme.fontFamily}};">
+          Why Every Cafe Needs a Landing Page
+        </h2>
+      </div>
+
+      <!-- Problem + Solution -->
+      <div class="grid grid-cols-2 gap-5">
+        <div class="p-5 rounded-xl" style="background-color: #FFF5F5; border: 2px solid #FECACA;">
+          <div class="text-xl mb-2">☕</div>
+          <h3 class="font-bold text-sm mb-2" style="color: #991B1B;">The Problem</h3>
+          <p class="text-xs leading-relaxed mb-3" style="color: #5C4033;">Cafes thrive on atmosphere and personality — but most have no place online to show it. Potential customers search, find nothing, and walk into a competitor.</p>
+          <div class="flex flex-col gap-1">
+            <span class="text-xs" style="color: #7F1D1D;">• Invisible to online searchers</span>
+            <span class="text-xs" style="color: #7F1D1D;">• No way to showcase the menu</span>
+            <span class="text-xs" style="color: #7F1D1D;">• Lost walk-in revenue daily</span>
+          </div>
+        </div>
+
+        <div class="p-5 rounded-xl" style="background-color: #F0FFF4; border: 2px solid #BBF7D0;">
+          <div class="text-xl mb-2">✨</div>
+          <h3 class="font-bold text-sm mb-2" style="color: #14532D;">The Solution</h3>
+          <p class="text-xs leading-relaxed mb-3" style="color: #5C4033;">{{config.appName}}'s landing page — two focused sections that do exactly what a cafe needs: set the mood, show the menu, and invite the customer in.</p>
+          <div class="flex flex-col gap-1">
+            <span class="text-xs" style="color: #166534;">• Striking hero with brand identity</span>
+            <span class="text-xs" style="color: #166534;">• Curated signature menu items</span>
+            <span class="text-xs" style="color: #166534;">• Clean, fast, always-on page</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Principle callout -->
+      <div class="p-4 rounded-lg" style="background-color: {{config.brandColor.secondary}};">
+        <p class="text-sm italic" style="color: {{config.brandColor.primary}};">
+          "Two sections done brilliantly beat ten sections done generically. This page exists to turn online visitors into café regulars."
+        </p>
+      </div>
+    </div>
+
+    <!-- Right: Visual -->
+    <div class="sl-visual relative overflow-hidden">
+      <img
+        src="http://localhost:8001/common/image-generation?prompt=barista+making+latte+art+close+up+coffee+shop+warm+bokeh+professional+artisan"
+        alt="Barista at work"
+        class="w-full h-full object-cover"
+      />
+    </div>
+
+  </div>
+</section>
