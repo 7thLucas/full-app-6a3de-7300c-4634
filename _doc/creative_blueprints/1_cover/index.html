@@ -1,0 +1,57 @@
+<style>
+.mode-landscape .sl-layout { flex-direction: row; }
+.mode-portrait .sl-layout { flex-direction: column; }
+.mode-landscape .sl-content { width: 55%; }
+.mode-portrait .sl-content { width: 100%; flex: 1; }
+.mode-landscape .sl-visual { width: 45%; }
+.mode-portrait .sl-visual { width: 100%; height: 38%; }
+</style>
+
+<section class="w-full h-full overflow-auto bg-white">
+  <div class="sl-layout flex h-full">
+
+    <!-- Left: Content -->
+    <div class="sl-content flex flex-col justify-between p-12" style="background-color: #FEFAF6;">
+      <div>
+        <div class="w-10 h-1 mb-8 rounded-full" style="background-color: {{config.brandColor.accent}};"></div>
+        <p class="text-xs font-semibold tracking-widest uppercase mb-4" style="color: {{config.brandColor.accent}};">Cafe Landing Page</p>
+        <h1 class="text-5xl font-bold leading-tight mb-5" style="color: {{config.brandColor.primary}}; font-family: {{config.theme.fontFamily}};">
+          {{config.appName}}
+        </h1>
+        <p class="text-xl leading-relaxed mb-8" style="color: #5C4033;">
+          {{config.tagline}}
+        </p>
+
+        <div class="flex flex-col gap-3">
+          <div class="flex items-center gap-3">
+            <div class="w-2 h-2 rounded-full flex-shrink-0" style="background-color: {{config.brandColor.accent}};"></div>
+            <span class="text-sm" style="color: #5C4033;">
+              <strong style="color: {{config.brandColor.primary}};">Hero Section</strong> — first impression, instant mood
+            </span>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="w-2 h-2 rounded-full flex-shrink-0" style="background-color: {{config.brandColor.accent}};"></div>
+            <span class="text-sm" style="color: #5C4033;">
+              <strong style="color: {{config.brandColor.primary}};">Menu Section</strong> — signature items, curated for delight
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <data-attribution />
+      </div>
+    </div>
+
+    <!-- Right: Visual -->
+    <div class="sl-visual relative overflow-hidden">
+      <img
+        src="http://localhost:8001/common/image-generation?prompt=cozy+cafe+interior+warm+lighting+wooden+tables+artisan+coffee+cups+soft+sunlight+golden+tones"
+        alt="Cafe interior"
+        class="w-full h-full object-cover"
+      />
+      <div class="absolute inset-0" style="background: linear-gradient(to right, rgba(254,250,246,0.25), transparent);"></div>
+    </div>
+
+  </div>
+</section>
