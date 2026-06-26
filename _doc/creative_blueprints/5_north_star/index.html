@@ -1,0 +1,92 @@
+<section class="w-full h-full overflow-auto bg-white">
+  <div class="flex flex-col h-full p-10">
+
+    <!-- Header -->
+    <div class="mb-5">
+      <p class="text-xs font-semibold tracking-widest uppercase mb-2" style="color: {{config.brandColor.accent}};">North Star Metric</p>
+      <h2 class="text-3xl font-bold" style="color: {{config.brandColor.primary}}; font-family: {{config.theme.fontFamily}};">
+        Weekly Verified Operations
+      </h2>
+      <p class="text-xs mt-1 italic" style="color: #7A6050;">Projected impact — based on your inputs. Adjust the assumptions to match your cafe.</p>
+    </div>
+
+    <div class="grid grid-cols-3 gap-4 flex-1">
+
+      <!-- Left col: Operation definition + WVO formula -->
+      <div class="col-span-2 flex flex-col gap-4">
+
+        <!-- Verified operation definition -->
+        <div class="rounded-xl p-5" style="background-color: {{config.brandColor.secondary}};">
+          <p class="text-xs font-semibold uppercase tracking-wider mb-3" style="color: {{config.brandColor.primary}};">The Verified Operation</p>
+          <div class="flex items-start gap-3">
+            <span class="text-xl mt-0.5">👆</span>
+            <div>
+              <p class="font-bold text-sm mb-1" style="color: {{config.brandColor.primary}};">CTA Click → Customer Visit Intent</p>
+              <p class="text-xs leading-relaxed" style="color: #5C4033;">
+                A visitor who lands on {{config.appName}}, reads the menu, and clicks "{{config.heroSection.ctaText}}" has signalled clear intent to visit the cafe. This is the operation the page exists to produce — not page views, not scroll depth, not impressions.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- WVO Formula -->
+        <div class="rounded-xl p-5 flex-1" style="border: 2px solid {{config.brandColor.secondary}};">
+          <p class="text-xs font-semibold uppercase tracking-wider mb-4" style="color: {{config.brandColor.accent}};">Weekly Verified Operations — Formula</p>
+
+          <div class="flex flex-col gap-3">
+            <div class="flex items-center gap-3 flex-wrap">
+              <div class="px-3 py-2 rounded-lg text-xs font-medium" style="background-color: #FEF3C7; color: #92400E;">
+                ⚙ Assumption — adjust this<br/>
+                <span class="font-bold text-sm">500</span> weekly page visitors
+              </div>
+              <span class="text-lg font-bold" style="color: {{config.brandColor.primary}};">×</span>
+              <div class="px-3 py-2 rounded-lg text-xs font-medium" style="background-color: #FEF3C7; color: #92400E;">
+                ⚙ Assumption — adjust this<br/>
+                <span class="font-bold text-sm">8%</span> CTA click rate
+              </div>
+              <span class="text-lg font-bold" style="color: {{config.brandColor.primary}};">=</span>
+              <div class="px-4 py-2 rounded-lg text-white font-bold" style="background-color: {{config.brandColor.primary}};">
+                <span class="text-lg">40</span>
+                <span class="text-xs ml-1">ops / week</span>
+              </div>
+            </div>
+            <p class="text-xs" style="color: #7A6050;">500 weekly visitors × 8% CTA click rate = <strong>40 verified operations / week</strong></p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right col: Value & ROI -->
+      <div class="flex flex-col gap-4">
+
+        <!-- Value per op -->
+        <div class="rounded-xl p-5" style="background-color: {{config.brandColor.primary}};">
+          <p class="text-xs font-semibold uppercase tracking-wider mb-2" style="color: {{config.brandColor.accent}};">Value per Operation</p>
+          <div class="px-2 py-1 rounded text-xs mb-3 font-medium" style="background-color: rgba(255,255,255,0.12); color: {{config.brandColor.secondary}};">
+            ⚙ Assumption — adjust this
+          </div>
+          <p class="text-xs leading-relaxed" style="color: rgba(245,230,208,0.85);">
+            Avg. customer spend: <span class="font-bold" style="color: {{config.brandColor.secondary}};">$12</span><br/>
+            40 ops/wk × $12 avg spend
+          </p>
+          <p class="text-3xl font-bold mt-2" style="color: {{config.brandColor.accent}};">$480</p>
+          <p class="text-xs" style="color: rgba(245,230,208,0.6);">potential weekly revenue</p>
+        </div>
+
+        <!-- Annual projection -->
+        <div class="rounded-xl p-5 flex-1 flex flex-col justify-between" style="border: 2px solid {{config.brandColor.secondary}};">
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-wider mb-1" style="color: {{config.brandColor.accent}};">Annual Projection</p>
+            <p class="text-xs mb-3" style="color: #7A6050;">$480/wk × 52 weeks</p>
+            <p class="text-4xl font-bold" style="color: {{config.brandColor.primary}};">$24,960</p>
+            <p class="text-xs mt-1" style="color: #7A6050;">in attributable visitor revenue / yr</p>
+          </div>
+          <p class="text-xs italic mt-3" style="color: #A08060;">Projected — based on your assumptions above. Replace with measured data once the page is live.</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
